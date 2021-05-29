@@ -1,0 +1,47 @@
+.loader2,
+.loader2::before,
+.loader2::after {
+  content: "";
+  width: 0.75em;
+  height: 3em;
+  background: var(--color-blue);
+}
+.loader2 {
+  color: var(--color-blue);
+  position: relative;
+  margin: 75px auto;
+  animation: loader2 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.loader2::before,
+.loader2::after {
+  position: absolute;
+  top: 0;
+  animation: loader2 1s ease-in-out infinite;
+}
+
+.loader2::before {
+  left: -1.3em;
+}
+.loader2::after {
+  right: -1.3em;
+  animation-delay: 0.4s;
+}
+@keyframes loader2 {
+  0% {
+    box-shadow: 0 0 var(--color-blue);
+    height: 3em;
+  }
+  40% {
+    box-shadow: 0 -1em var(--color-blue);
+    height: 30px;
+  }
+  80% {
+    box-shadow: 0 0;
+    height: 3em;
+  }
+  100% {
+    box-shadow: 0 0;
+    height: 3em;
+  }
+}

@@ -1,27 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
-import "styles/App.scss";
-import "styles/index.scss";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "styles/global.scss";
+import Main from "pages/Main";
+import "styles/colors.css";
 
-function App() {
+// TODO..シンタックスハイライトを使う　https://code-kitchen.dev/html/code/
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
