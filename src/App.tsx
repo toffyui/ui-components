@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Main from "pages/Main";
 import ButtonPage from "pages/ButtonPage";
-import "styles/colors.css";
 import "styles/global.scss";
 
 const App = () => {

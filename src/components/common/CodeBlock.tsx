@@ -35,19 +35,17 @@ const CodeBlock = ({ style }: Props) => {
         <div className={style.title}></div>
       )}
       {style.title.indexOf("button") !== -1 && (
-        <>
-          <button className={style.title}>Hover me!</button>
-        </>
+        <button className={style.title}>Hover me!</button>
       )}
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
           {style.title.indexOf("loader") !== -1 && (
-            <pre>
-              <code>&lt;div class="{style.title}"&gt;&lt;/div&gt;</code>
-            </pre>
+            <code className="html">
+              &lt;div class="{style.title}"&gt;&lt;/div&gt;
+            </code>
           )}
           {style.title.indexOf("button") !== -1 && (
-            <code>
+            <code className="html">
               &lt;button class="{style.title}"&gt;Hover me!&lt;/button&gt;
             </code>
           )}
