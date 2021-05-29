@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <h1 className="title">CSS Animations</h1>
+      <h1 className="title">UI Components</h1>
       <div className="button" onClick={clickHandler}>
         {page}
       </div>

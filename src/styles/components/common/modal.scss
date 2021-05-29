@@ -15,7 +15,7 @@
   text-align: left;
   width: 500px;
   border-radius: 10px;
-  background-color: var(--color-gray-primary);
+  background-color: #e0e5eb;
   position: absolute;
 }
 
@@ -38,7 +38,7 @@
   &:hover {
     background: var(--color-black-secondary);
     border-color: var(--color-black-secondary);
-    color: var(--color-white-primary);
+    color: #fff;
   }
 }
 .modal-container > .container > .copy {
@@ -46,8 +46,8 @@
   padding: 10px;
   font-size: 1.2rem;
   border: none;
-  background: var(--color-blue);
-  color: var(--color-white-primary);
+  background: #333c5f;
+  color: #fff;
   border-radius: 0 0 10px 10px;
 }
 

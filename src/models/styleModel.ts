@@ -1,4 +1,4 @@
 export interface styleModel {
   title: string;
-  css: string;
+  scss: string;
 }

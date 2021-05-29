@@ -1,6 +1,8 @@
-export const loader2 = {
+import { styleModel } from "models/styleModel";
+
+export const loader2: styleModel = {
   title: "loader2",
-  css: `.loader2,
+  scss: `.loader2,
 .loader2::before,
 .loader2::after {
   content: "";
@@ -14,21 +16,24 @@ export const loader2 = {
   margin: 75px auto;
   animation: loader2 1s ease-in-out infinite;
   animation-delay: 0.2s;
-}
-.loader2::before,
-.loader2::after {
-  position: absolute;
-  top: 0;
-  animation: loader2 1s ease-in-out infinite;
+  width: 0.75em;
+  height: 3em;
+  background: #333c5f;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    animation: loader2 1s ease-in-out infinite;
+  }
+  &::before {
+    left: -1.3em;
+  }
+  &::after {
+    right: -1.3em;
+    animation-delay: 0.4s;
+  }
 }
 
-.loader2::before {
-  left: -1.3em;
-}
-.loader2::after {
-  right: -1.3em;
-  animation-delay: 0.4s;
-}
 @keyframes loader2 {
   0% {
     box-shadow: 0 0 #333c5f;
@@ -36,7 +41,7 @@ export const loader2 = {
   }
   40% {
     box-shadow: 0 -1em #333c5f;
-    height: 30px;
+    height: 4em;
   }
   80% {
     box-shadow: 0 0;
@@ -46,6 +51,7 @@ export const loader2 = {
     box-shadow: 0 0;
     height: 3em;
   }
-}  
+}
+
 `,
 } as const;

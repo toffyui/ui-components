@@ -1,14 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import useToggle from "hooks/useToggle";
 import { styleModel } from "models/styleModel";
 import Modal from "./Modal";
 import hljs from "highlight.js";
-import css from "highlight.js/lib/languages/css";
+import scss from "highlight.js/lib/languages/scss";
 import "highlight.js/styles/atom-one-dark.css";
 import "styles/components/common/code-block-container.scss";
 import "styles/styles.scss";
 
-hljs.registerLanguage("css", css);
+hljs.registerLanguage("scss", scss);
 
 type Props = {
   style: styleModel;
@@ -20,10 +20,9 @@ const CodeBlock = ({ style }: Props) => {
   });
 
   const { isOpen, clickHandler } = useToggle();
-  const codeRef = useRef<HTMLElement>(null);
-  const copyText = (css: string) => {
+  const copyText = (scss: string) => {
     const element = document.createElement("textarea");
-    element.value = css;
+    element.value = scss;
     document.body.appendChild(element);
     element.select();
     document.execCommand("copy");
@@ -41,19 +40,19 @@ const CodeBlock = ({ style }: Props) => {
         </>
       )}
       {isOpen && (
-        <Modal closeModal={clickHandler} copyText={() => copyText(style.css)}>
+        <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
           {style.title.indexOf("loader") !== -1 && (
-            <code>&lt;div class="{style.title}"&gt;&lt;/div&gt;</code>
+            <pre>
+              <code>&lt;div class="{style.title}"&gt;&lt;/div&gt;</code>
+            </pre>
           )}
           {style.title.indexOf("button") !== -1 && (
             <code>
-              &lt;button class="{style.title}"&gt;BUTTON&lt;/button&gt;
+              &lt;button class="{style.title}"&gt;Hover me!&lt;/button&gt;
             </code>
           )}
           <pre className="code">
-            <code className="css" ref={codeRef}>
-              {style.css}
-            </code>
+            <code className="scss">{style.scss}</code>
           </pre>
         </Modal>
       )}

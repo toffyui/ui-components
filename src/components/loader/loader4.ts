@@ -1,6 +1,8 @@
-export const loader4 = {
+import { styleModel } from "models/styleModel";
+
+export const loader4: styleModel = {
   title: "loader4",
-  css: `.loader4 {
+  scss: `.loader4 {
   border: 0.75rem solid rgba(255, 255, 255, 0.5);
   border-top: 0.75rem solid #333c5f;
   border-radius: 50%;
