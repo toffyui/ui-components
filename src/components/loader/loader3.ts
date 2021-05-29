@@ -34,7 +34,7 @@ export const loader3 = {
 
 @keyframes loader3 {
   50% {
-    background: var(--color-blue);
+    background: #333c5f;
   }
 }
 `,
