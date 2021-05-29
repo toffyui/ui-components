@@ -20,7 +20,7 @@ const Header = () => {
       {isOpen && (
         <ul className="lists">
           {pages.map((page: string, index: number) => (
-            <li key={index} onClick={() => changePage(page)}>
+            <li className="list" key={index} onClick={() => changePage(page)}>
               {page}
             </li>
           ))}

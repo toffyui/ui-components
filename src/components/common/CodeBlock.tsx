@@ -1,45 +1,46 @@
-import { FC } from "react";
 import useToggle from "hooks/useToggle";
+import { styleModel } from "models/styleModel";
+import { useEffect, useRef } from "react";
+import Modal from "./Modal";
 import "styles/components/common/code-block-container.scss";
 import "styles/styles.scss";
-import { styleModel } from "models/styleModel";
+import hljs from "highlight.js";
+import css from "highlight.js/lib/languages/css";
+import "highlight.js/styles/atom-one-dark.css";
 
-type ModalProps = {
-  closeModal: () => void;
-  copyText: () => void;
-};
+hljs.registerLanguage("css", css);
 
 type Props = {
   style: styleModel;
 };
 
-const Modal: FC<ModalProps> = ({ children, closeModal, copyText }) => {
-  return (
-    <div className="modal-container">
-      <div className="container">
-        {children}
-        <button onClick={closeModal}>閉じる</button>
-        <button onClick={copyText}>コピーする</button>
-      </div>
-    </div>
-  );
-};
-
 const CodeBlock = ({ style }: Props) => {
+  useEffect(() => {
+    hljs.highlightAll();
+  });
+
   const { isOpen, clickHandler } = useToggle();
-  const copyText = () => {
-    var text = document.getElementsByTagName("textarea")[0];
-    text.select();
+  const codeRef = useRef<HTMLElement>(null);
+  const copyText = (css: string) => {
+    const element = document.createElement("textarea");
+    element.value = css;
+    document.body.appendChild(element);
+    element.select();
     document.execCommand("copy");
-    window.alert("コピーしました");
+    document.body.removeChild(element);
+    alert("Copied!");
   };
   return (
     <div className="code-block-container" onClick={clickHandler}>
       <div className={style.title}></div>
       {isOpen && (
-        <Modal closeModal={clickHandler} copyText={copyText}>
+        <Modal closeModal={clickHandler} copyText={() => copyText(style.css)}>
           <code>&lt;div class="{style.title}"&gt;&lt;/div&gt;</code>
-          <textarea className="textarea" value={style.css} readOnly />
+          <pre className="code">
+            <code className="css" ref={codeRef}>
+              {style.css}
+            </code>
+          </pre>
         </Modal>
       )}
     </div>

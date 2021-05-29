@@ -43,14 +43,23 @@
   border-radius: 8px;
   background: var(--color-gray-primary);
   color: var(--color-blue);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6),
     -2px -2px 4px rgba(255, 255, 255, 0.4),
     2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   position: absolute;
   top: 4rem;
   right: 2rem;
   list-style: none;
   cursor: pointer;
+}
+
+.header > .lists > .list {
+  border-bottom: 1px solid var(--color-blue);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  &:hover {
+    transform: scale(1.2);
+  }
 }

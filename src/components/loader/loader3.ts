@@ -1,36 +1,41 @@
 export const loader3 = {
   title: "loader3",
   css: `.loader3 {
-        width: 40px;
-        height: 40px;
-        margin: 100px auto;
-        background-color: #fff;
-      
-        border-radius: 100%;
-        -webkit-animation: loader3 1s infinite ease-in-out;
-        animation: loader3 1s infinite ease-in-out;
-      }
-      
-      @-webkit-keyframes loader3 {
-        0% {
-          -webkit-transform: scale(0);
-        }
-        100% {
-          -webkit-transform: scale(1);
-          opacity: 0;
-        }
-      }
-      
-      @keyframes loader3 {
-        0% {
-          -webkit-transform: scale(0);
-          transform: scale(0);
-        }
-        100% {
-          -webkit-transform: scale(1);
-          transform: scale(1);
-          opacity: 0;
-        }
-      }
-      `,
+  position: relative;
+  width: 2em;
+  height: 2em;
+  margin: 80px auto;
+  border-radius: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: loader3 1s infinite;
+  -webkit-animation: loader3 1s infinite;
+  animation-delay: (1s / 3);
+}
+.loader3:before,
+.loader3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: loader3 1s infinite;
+}
+.loader3:before {
+  left: -2em;
+}
+.loader3:after {
+  right: -2em;
+  animation-delay: (1s / 1.5);
+}
+
+@keyframes loader3 {
+  50% {
+    background: #333c5f;
+  }
+}  
+`,
 } as const;
