@@ -1,12 +1,12 @@
+import { useEffect, useRef } from "react";
 import useToggle from "hooks/useToggle";
 import { styleModel } from "models/styleModel";
-import { useEffect, useRef } from "react";
 import Modal from "./Modal";
-import "styles/components/common/code-block-container.scss";
-import "styles/styles.scss";
 import hljs from "highlight.js";
 import css from "highlight.js/lib/languages/css";
 import "highlight.js/styles/atom-one-dark.css";
+import "styles/components/common/code-block-container.scss";
+import "styles/styles.scss";
 
 hljs.registerLanguage("css", css);
 
@@ -32,10 +32,24 @@ const CodeBlock = ({ style }: Props) => {
   };
   return (
     <div className="code-block-container" onClick={clickHandler}>
-      <div className={style.title}></div>
+      {style.title.indexOf("loader") !== -1 && (
+        <div className={style.title}></div>
+      )}
+      {style.title.indexOf("button") !== -1 && (
+        <>
+          <button className={style.title}>Hover me!</button>
+        </>
+      )}
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.css)}>
-          <code>&lt;div class="{style.title}"&gt;&lt;/div&gt;</code>
+          {style.title.indexOf("loader") !== -1 && (
+            <code>&lt;div class="{style.title}"&gt;&lt;/div&gt;</code>
+          )}
+          {style.title.indexOf("button") !== -1 && (
+            <code>
+              &lt;button class="{style.title}"&gt;BUTTON&lt;/button&gt;
+            </code>
+          )}
           <pre className="code">
             <code className="css" ref={codeRef}>
               {style.css}

@@ -24,10 +24,4 @@
   --color-red: #ff5e57;
   --color-red-pale: #ffe5e4;
   --color-danger: #ff0000;
-  --zIndex-user-icon: 2;
-  --zIndex-my-icon: 3;
-  --zIndex-alert-popup: 4;
-  --zIndex-room: 5;
-  --zIndex-sidebar: 7;
-  --zIndex-modal: 9;
 }

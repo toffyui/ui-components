@@ -8,8 +8,8 @@
   -webkit-animation: loader1 1s infinite;
   animation-delay: (1s / 3);
 }
-.loader1:before,
-.loader1:after {
+.loader1::before,
+.loader1::after {
   content: "";
   position: absolute;
   display: block;
@@ -20,10 +20,10 @@
   transform: translateY(-50%);
   animation: loader1 1s infinite;
 }
-.loader1:before {
+.loader1::before {
   left: -1.3em;
 }
-.loader1:after {
+.loader1::after {
   left: 1.3em;
   animation-delay: (1s / 1.5);
 }
