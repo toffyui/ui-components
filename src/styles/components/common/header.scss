@@ -1,3 +1,4 @@
+@import "styles/media.scss";
 .header {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   display: table;
@@ -5,6 +6,9 @@
   width: 100%;
   height: 6rem;
   position: relative;
+  @include tab {
+    height: 5rem;
+  }
 }
 
 .header > .title {
@@ -13,6 +17,9 @@
   vertical-align: middle;
   font-size: 2.5rem;
   font-weight: bold;
+  @include tab {
+    font-size: 1.8rem;
+  }
 }
 
 .header > .button {
@@ -37,6 +44,73 @@
       -2px -2px 4px rgba(255, 255, 255, 0.4),
       2px 2px 2px rgba(255, 255, 255, 0.05), 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
+  @include tab {
+    top: 1.2rem;
+  }
+  @include sp {
+    display: none;
+  }
+}
+
+/*
+* SP用ハンバーガーメニュー
+*/
+.header > .sp-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.2rem;
+  width: 40px;
+  height: 34px;
+  cursor: pointer;
+  display: none;
+  @include sp {
+    display: block;
+  }
+  &.-active {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    &.-active span:nth-of-type(1) {
+      -webkit-transform: translateY(15px) rotate(-45deg);
+      transform: translateY(15px) rotate(-45deg);
+    }
+    &.-active span:nth-of-type(2) {
+      -webkit-transform: translateY(0) rotate(45deg);
+      transform: translateY(0) rotate(45deg);
+    }
+    &.-active span:nth-of-type(3) {
+      opacity: 0;
+    }
+  }
+}
+.header > .sp-button > span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #333c5f;
+  border-radius: 4px;
+}
+.header > .sp-button,
+.header > .sp-button > span {
+  display: inline-block;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+.header > .sp-button > span:nth-of-type(1) {
+  top: 0;
+}
+.header > .sp-button > span:nth-of-type(2) {
+  top: 15px;
+}
+.header > .sp-button > span:nth-of-type(3) {
+  bottom: 0;
+}
+
+.header > .sp-button > span {
+  display: none;
+  @include sp {
+    display: block;
+  }
 }
 
 .header > .lists {
@@ -53,12 +127,17 @@
   right: 2rem;
   list-style: none;
   cursor: pointer;
+  @include sp {
+    top: 3.5rem;
+    right: 1rem;
+  }
 }
 
 .header > .lists > .list {
   border-bottom: 1px solid #333c5f;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  transition: 0.2s;
   &:hover {
     transform: scale(1.2);
   }
