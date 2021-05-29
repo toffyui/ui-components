@@ -8,7 +8,7 @@ export const button3: styleModel = {
   border: none;
   position: relative;
   font-size: 1.6em;
-  transition: 1s ease all;
+  transition: 0.6s ease all;
   outline: none;
   margin: 65px auto;
   width: 150px;
@@ -18,8 +18,8 @@ export const button3: styleModel = {
     color: #333c5f;
     &::before,
     &::after {
-    width: 100%;
-    transition: 1s ease all;
+      width: 100%;
+      transition: 0.6s ease all;
     }
   }
   &::before,
@@ -31,7 +31,7 @@ export const button3: styleModel = {
     height: 2px;
     width: 0;
     background: #333c5f;
-    transition: 0.5s ease all;
+    transition: 0.3s ease all;
   }
   &::after {
     right: inherit;
