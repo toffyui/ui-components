@@ -14,10 +14,17 @@
 .modal-container > .container {
   text-align: left;
   width: 90%;
+  padding-top: 20px;
   max-width: 500px;
   border-radius: 10px;
   background-color: #e0e5eb;
   position: absolute;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .modal-container > .container > .close {
@@ -33,8 +40,8 @@
   line-height: 1.8em;
   cursor: pointer;
   transition: 0.2s;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
   &:hover {
     background: #333c5f;
@@ -61,10 +68,8 @@
 
 .modal-container > .container > .code {
   width: 90%;
-  height: 300px;
+  max-height: 340px;
   overflow: scroll;
-  margin: 1em 0;
-  padding: 0.5em;
   font-size: 1em;
   border: none;
   border-radius: 10px;

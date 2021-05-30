@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="main-container">
         {loaders.map((loader: styleModel, index: number) => (
           <CodeBlock style={loader} key={index} />
         ))}

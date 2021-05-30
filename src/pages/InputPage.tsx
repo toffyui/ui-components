@@ -9,7 +9,7 @@ const ButtonPage = () => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="main-container">
         {inputs.map((input: styleModel, index: number) => (
           <CodeBlock style={input} key={index} />
         ))}

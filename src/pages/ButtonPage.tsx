@@ -9,7 +9,7 @@ const ButtonPage = () => {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="main-container">
         {buttons.map((button: styleModel, index: number) => (
           <CodeBlock style={button} key={index} />
         ))}
