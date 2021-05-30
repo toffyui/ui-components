@@ -1,6 +1,6 @@
 import Header from "components/common/Header";
 import CodeBlock from "components/common/CodeBlock";
-import { buttons } from "components/button";
+import { inputs } from "components/input";
 import "styles/components/common/container.scss";
 import { styleModel } from "models/styleModel";
 
@@ -9,8 +9,8 @@ const ButtonPage = () => {
     <>
       <Header />
       <div className="container">
-        {buttons.map((button: styleModel, index: number) => (
-          <CodeBlock style={button} key={index} />
+        {inputs.map((input: styleModel, index: number) => (
+          <CodeBlock style={input} key={index} />
         ))}
       </div>
     </>

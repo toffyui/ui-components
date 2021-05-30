@@ -29,6 +29,9 @@ const CodeBlock = ({ style }: Props) => {
     document.body.removeChild(element);
     alert("Copied!");
   };
+  const clickInput = (e: { stopPropagation: () => void }) => {
+    e.stopPropagation();
+  };
   return (
     <div className="code-block-container" onClick={clickHandler}>
       {style.title.indexOf("loader") !== -1 && (
@@ -36,6 +39,12 @@ const CodeBlock = ({ style }: Props) => {
       )}
       {style.title.indexOf("button") !== -1 && (
         <button className={style.title}>Hover me!</button>
+      )}
+      {style.title.indexOf("input") !== -1 && (
+        <div className={style.title}>
+          <input onClick={clickInput} type="text" />
+          <label>Name</label>
+        </div>
       )}
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
@@ -47,6 +56,15 @@ const CodeBlock = ({ style }: Props) => {
           {style.title.indexOf("button") !== -1 && (
             <code className="html">
               &lt;button class="{style.title}"&gt;Hover me!&lt;/button&gt;
+            </code>
+          )}
+          {style.title.indexOf("input") !== -1 && (
+            <code className="html">
+              &lt;div className={style.title}&gt;
+              <br />
+              &nbsp; &lt;input type="text" /&gt;
+              <br /> &nbsp; &lt;label&gt;Name&lt;/label&gt;
+              <br /> &lt;/div&gt;
             </code>
           )}
           <pre className="code">
