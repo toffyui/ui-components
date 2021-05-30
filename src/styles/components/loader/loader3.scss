@@ -3,7 +3,7 @@
   width: 2em;
   height: 2em;
   margin: 80px auto;
-  border-radius: 90%;
+  border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   animation: loader3 1s infinite;
   -webkit-animation: loader3 1s infinite;
@@ -15,7 +15,7 @@
     display: block;
     width: 1.5em;
     height: 1.5em;
-    border-radius: 90%;
+    border-radius: 50%;
     background: rgba(255, 255, 255, 0.2);
     top: 50%;
     transform: translateY(-50%);
