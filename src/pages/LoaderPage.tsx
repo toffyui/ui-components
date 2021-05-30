@@ -5,7 +5,7 @@ import { loaders } from "components/loader";
 import "styles/components/common/container.scss";
 import { styleModel } from "models/styleModel";
 
-const Main = () => {
+const LoaderPage = () => {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ const Main = () => {
     </>
   );
 };
-export default Main;
+export default LoaderPage;

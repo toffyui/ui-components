@@ -60,7 +60,7 @@ const CodeBlock = ({ style }: Props) => {
           )}
           {style.title.indexOf("input") !== -1 && (
             <code className="html">
-              &lt;div className={style.title}&gt;
+              &lt;div class={style.title}&gt;
               <br />
               &nbsp; &lt;input type="text" /&gt;
               <br /> &nbsp; &lt;label&gt;Name&lt;/label&gt;

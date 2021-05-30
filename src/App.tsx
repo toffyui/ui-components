@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Main from "pages/Main";
+import LoaderPage from "pages/LoaderPage";
 import ButtonPage from "pages/ButtonPage";
+import MainPage from "pages/MainPage";
 import InputPage from "pages/InputPage";
 import "styles/global.scss";
 
@@ -9,10 +10,10 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Main />
+          <MainPage />
         </Route>
         <Route exact path="/loader">
-          <Main />
+          <LoaderPage />
         </Route>
         <Route exact path="/button">
           <ButtonPage />
