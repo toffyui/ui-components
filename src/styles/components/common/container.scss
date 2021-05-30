@@ -12,4 +12,11 @@
   @include tab {
     min-height: calc(100vh - 12rem);
   }
+  > .description {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333c5f;
+  }
 }

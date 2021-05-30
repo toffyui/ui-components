@@ -5,16 +5,16 @@ import "styles/components/common/header.scss";
 import clsx from "clsx";
 
 const Header = () => {
-  const pages = ["Main", "Loader", "Button", "Input"];
+  const pages = ["HOME", "Loader", "Button", "Input"];
   const location = useLocation();
   const nowLocation = location.pathname.slice(1);
-  const [page, setPage] = useState<string>(nowLocation || "Main");
+  const [page, setPage] = useState<string>(nowLocation || "HOME");
   const { isOpen, clickHandler } = useToggle();
   const history = useHistory();
   const changePage = (page: string) => {
     setPage(page);
     clickHandler();
-    if (page === "Main") {
+    if (page === "HOME") {
       history.push("/");
       return;
     }
