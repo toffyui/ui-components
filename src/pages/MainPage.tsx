@@ -15,7 +15,9 @@ const MainPage = () => {
     <>
       <Header />
       <div className="main-container">
-        <div className="description">Click and show the code!</div>
+        <div className="description">
+          Click your interesting component and copy the code.
+        </div>
         <div className="code-block-container" onClick={() => goPage("/Loader")}>
           <div className="title">Loaders</div>
           <div className="loader2"></div>
