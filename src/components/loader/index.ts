@@ -4,6 +4,7 @@ import { loader3 } from "components/loader/loader3";
 import { loader4 } from "components/loader/loader4";
 import { loader5 } from "components/loader/loader5";
 import { loader6 } from "components/loader/loader6";
+import { loader7 } from "components/loader/loader7";
 import { styleModel } from "models/styleModel";
 
 export const loaders: styleModel[] = [
@@ -13,4 +14,5 @@ export const loaders: styleModel[] = [
   loader4,
   loader5,
   loader6,
+  loader7,
 ];
