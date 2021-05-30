@@ -1,4 +1,5 @@
 import Header from "components/common/Header";
+import Footer from "components/common/Footer";
 import CodeBlock from "components/common/CodeBlock";
 import { buttons } from "components/button";
 import "styles/components/common/container.scss";
@@ -13,6 +14,7 @@ const ButtonPage = () => {
           <CodeBlock style={button} key={index} />
         ))}
       </div>
+      <Footer />
     </>
   );
 };

@@ -1,4 +1,5 @@
 import Header from "components/common/Header";
+import Footer from "components/common/Footer";
 import CodeBlock from "components/common/CodeBlock";
 import { loaders } from "components/loader";
 import "styles/components/common/container.scss";
@@ -13,6 +14,7 @@ const Main = () => {
           <CodeBlock style={loader} key={index} />
         ))}
       </div>
+      <Footer />
     </>
   );
 };

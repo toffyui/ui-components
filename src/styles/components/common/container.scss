@@ -1,3 +1,4 @@
+@import "styles/media.scss";
 .container {
   padding-top: 30px;
   width: 80%;
@@ -7,4 +8,8 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  min-height: calc(100vh - 14rem);
+  @include tab {
+    min-height: calc(100vh - 12rem);
+  }
 }
