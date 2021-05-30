@@ -18,7 +18,7 @@ const MainPage = () => {
         <div className="description">Click and show the code!</div>
         <div className="code-block-container" onClick={() => goPage("/Loader")}>
           <div className="title">Loaders</div>
-          <div className="loader5"></div>
+          <div className="loader2"></div>
         </div>
         <div className="code-block-container" onClick={() => goPage("/Button")}>
           <div className="title">Buttons</div>
