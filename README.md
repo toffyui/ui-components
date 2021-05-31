@@ -16,3 +16,7 @@ $ yarn start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## License
+
+The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.
