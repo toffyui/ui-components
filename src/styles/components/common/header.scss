@@ -61,6 +61,7 @@
   right: 1.2rem;
   width: 40px;
   height: 34px;
+  z-index: 10;
   cursor: pointer;
   display: none;
   @include sp {
@@ -117,6 +118,7 @@
   border-radius: 8px;
   background: #e0e5eb;
   display: flex;
+  z-index: 10;
   flex-direction: column;
   text-align: left;
   color: #333c5f;

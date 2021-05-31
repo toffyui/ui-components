@@ -83,7 +83,9 @@
 
 .modal-container > .container > .html {
   text-align: left;
-  width: 90%;
+  overflow-x: scroll;
+  width: 80%;
+  margin-right: 10%;
   display: inline-block;
   color: #282c34;
 }

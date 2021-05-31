@@ -18,5 +18,8 @@
     font-size: 2rem;
     font-weight: bold;
     color: #333c5f;
+    @include sp {
+      font-size: 1.7rem;
+    }
   }
 }
