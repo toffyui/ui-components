@@ -4,23 +4,36 @@ export const button6: styleModel = {
   title: "button6",
   scss: `.button6 {
   position: relative;
-  background: #333c5f;
-  border-radius: 10px;
+  display: inline-block;
   width: 150px;
-  margin: 68px auto;
-  padding: 0.7rem 0;
+  margin: 65px auto;
+  padding: 0.8rem 0;
+  text-align: center;
+  background: #333c5f;
   font-size: 1.5rem;
   color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px dashed #fff;
-  box-shadow: 0px 0px 0px 5px #333c5f;
-  transition: 0.3s;
+  border: 2px solid #333c5f;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(135deg);
+    transition: 0.6s;
+    z-index: -1;
+  }
   &:hover {
     color: #333c5f;
-    background: #fff;
-    border: 1px dashed #333c5f;
-    box-shadow: 0px 0px 0px 5px #fff;
+    &::after {
+      height: 480%;
+      opacity: 1;
+    }
   }
 }
 `,

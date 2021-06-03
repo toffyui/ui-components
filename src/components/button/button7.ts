@@ -1,4 +1,8 @@
-.button7 {
+import { styleModel } from "models/styleModel";
+
+export const button7: styleModel = {
+  title: "button7",
+  scss: `.button7 {
   position: relative;
   background: #333c5f;
   border-radius: 10px;
@@ -19,3 +23,5 @@
     box-shadow: 0px 0px 0px 5px #fff;
   }
 }
+`,
+} as const;

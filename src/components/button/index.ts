@@ -4,6 +4,7 @@ import { button3 } from "components/button/button3";
 import { button4 } from "components/button/button4";
 import { button5 } from "components/button/button5";
 import { button6 } from "components/button/button6";
+import { button7 } from "components/button/button7";
 import { styleModel } from "models/styleModel";
 
 export const buttons: styleModel[] = [
@@ -13,4 +14,5 @@ export const buttons: styleModel[] = [
   button4,
   button5,
   button6,
+  button7,
 ];
