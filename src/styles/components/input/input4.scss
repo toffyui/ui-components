@@ -1,4 +1,4 @@
-.input1 {
+.input4 {
   width: 90%;
   height: 2rem;
   margin: 80px auto;
@@ -21,26 +21,30 @@
     background: transparent;
     box-sizing: border-box;
     &:focus + label {
-      color: #333c5f;
+      top: -30px;
+      left: 0;
+      color: #fff;
       font-size: 0.8rem;
+      padding: 0.3rem;
+      border-radius: 5px;
       line-height: 0.8rem;
-      padding: 0 2px;
-      transform: translate3d(5px, -6px, 0);
+      transition: 0.3s;
+      background: #333c5f;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border: 5px solid transparent;
+        border-top: 5px solid #333c5f;
+      }
     }
   }
   > label {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding-left: 10px;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    background-color: transparent;
+    top: 8px;
+    left: 15px;
     color: #808080;
-    box-sizing: border-box;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
   }
 }
