@@ -29,7 +29,7 @@ const CodeBlock = ({ style }: Props) => {
     document.body.removeChild(element);
     alert("Copied!");
   };
-  const clickInput = (e: { stopPropagation: () => void }) => {
+  const stopPropagation = (e: { stopPropagation: () => void }) => {
     e.stopPropagation();
   };
   return (
@@ -42,35 +42,40 @@ const CodeBlock = ({ style }: Props) => {
       )}
       {style.title.indexOf("input") !== -1 && (
         <div className={style.title}>
-          <input onClick={clickInput} type="text" />
+          <input onClick={stopPropagation} type="text" />
           <label>Name</label>
         </div>
       )}
       {isOpen && (
-        <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
-          {style.title.indexOf("loader") !== -1 && (
-            <code className="html">
-              &lt;div class="{style.title}"&gt;&lt;/div&gt;
-            </code>
-          )}
-          {style.title.indexOf("button") !== -1 && (
-            <code className="html">
-              &lt;button class="{style.title}"&gt;Hover me!&lt;/button&gt;
-            </code>
-          )}
-          {style.title.indexOf("input") !== -1 && (
-            <code className="html">
-              &lt;div class={style.title}&gt;
-              <br />
-              &nbsp; &lt;input type="text" /&gt;
-              <br /> &nbsp; &lt;label&gt;Name&lt;/label&gt;
-              <br /> &lt;/div&gt;
-            </code>
-          )}
-          <pre className="code">
-            <code className="scss">{style.scss}</code>
-          </pre>
-        </Modal>
+        <div onClick={stopPropagation}>
+          <Modal
+            closeModal={clickHandler}
+            copyText={() => copyText(style.scss)}
+          >
+            {style.title.indexOf("loader") !== -1 && (
+              <code className="html">
+                &lt;div class="{style.title}"&gt;&lt;/div&gt;
+              </code>
+            )}
+            {style.title.indexOf("button") !== -1 && (
+              <code className="html">
+                &lt;button class="{style.title}"&gt;Hover me!&lt;/button&gt;
+              </code>
+            )}
+            {style.title.indexOf("input") !== -1 && (
+              <code className="html">
+                &lt;div class={style.title}&gt;
+                <br />
+                &nbsp; &lt;input type="text" /&gt;
+                <br /> &nbsp; &lt;label&gt;Name&lt;/label&gt;
+                <br /> &lt;/div&gt;
+              </code>
+            )}
+            <pre className="code">
+              <code className="scss">{style.scss}</code>
+            </pre>
+          </Modal>
+        </div>
       )}
     </div>
   );

@@ -1,0 +1,40 @@
+import { styleModel } from "models/styleModel";
+
+export const button6: styleModel = {
+  title: "button6",
+  scss: `.button6 {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  margin: 65px auto;
+  padding: 0.8rem 0;
+  text-align: center;
+  background: #333c5f;
+  font-size: 1.5rem;
+  color: #fff;
+  border: 2px solid #333c5f;
+  overflow: hidden;
+  z-index: 1;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(135deg);
+    transition: 0.6s;
+    z-index: -1;
+  }
+  &:hover {
+    color: #333c5f;
+    &::after {
+      height: 480%;
+      opacity: 1;
+    }
+  }
+}
+`,
+} as const;
