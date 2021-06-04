@@ -1,4 +1,8 @@
-.button8 {
+import { styleModel } from "models/styleModel";
+
+export const button8: styleModel = {
+  title: "button8",
+  scss: `.button8 {
   position: relative;
   width: 150px;
   margin: 65px auto;
@@ -17,7 +21,7 @@
   }
 }
 
-@keyframes button8 {
+  @keyframes button8 {
   0% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -27,3 +31,5 @@
     transform: scale(1.2);
   }
 }
+`,
+} as const;
