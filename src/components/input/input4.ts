@@ -1,4 +1,8 @@
-.input4 {
+import { styleModel } from "models/styleModel";
+
+export const input4: styleModel = {
+  title: "input4",
+  scss: `.input4 {
   width: 90%;
   height: 2rem;
   margin: 80px auto;
@@ -21,23 +25,23 @@
     background: transparent;
     box-sizing: border-box;
     &:focus + label {
-      top: -30px;
-      left: 0;
-      color: #fff;
-      font-size: 0.8rem;
-      padding: 0.3rem;
-      border-radius: 5px;
-      line-height: 0.8rem;
-      transition: 0.3s;
-      background: #333c5f;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border: 5px solid transparent;
-        border-top: 5px solid #333c5f;
+    top: -30px;
+    left: 0;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    line-height: 0.8rem;
+    transition: 0.3s;
+    background: #333c5f;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border: 5px solid transparent;
+      border-top: 5px solid #333c5f;
       }
     }
   }
@@ -48,3 +52,5 @@
     color: #808080;
   }
 }
+`,
+} as const;

@@ -22,14 +22,14 @@ export const input1: styleModel = {
     outline: none;
     padding: 0 10px;
     font-size: 1.2rem;
-    background-color: transparent;
+    background: transparent;
     box-sizing: border-box;
     &:focus + label {
-    color: #333c5f;
-    font-size: 0.8rem;
-    line-height: 0.8rem;
-    padding: 0 2px;
-    transform: translate3d(5px, -6px, 0);
+      color: #333c5f;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      padding: 0 2px;
+      transform: translate3d(5px, -6px, 0);
     }
   }
   > label {

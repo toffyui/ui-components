@@ -5,22 +5,29 @@ export const input2: styleModel = {
   scss: `.input2 {
   width: 90%;
   margin: 80px auto;
-  osition: relative;
+  position: relative;
+  background: #e0e5ec;
   > input {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     appearance: none;
     box-sizing: border-box;
+    background: transparent;
     border: none;
     outline: none;
     font-size: 1.2rem;
     border-radius: 20px;
-    padding: 10px 20px;
-    background: #e0e5ec;
+    padding: 20px;
     text-shadow: 1px 1px 0 #fff;
     box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
     width: 100%;
     transition: all 0.2s ease-in-out;
     &:focus {
-    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+      box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
       + label {
         top: -20px;
         left: 15px;
