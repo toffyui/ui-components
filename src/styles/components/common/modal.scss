@@ -66,8 +66,11 @@
 * TODO..以下のスタイルがmodal-container内に書かれているのは微妙なのでリファクタする
 */
 
-.modal-container > .container > .code {
+.modal-container > .container > .inbox {
   width: 90%;
+}
+
+.modal-container > .container > .inbox > .code {
   max-height: 340px;
   overflow: scroll;
   font-size: 1em;
@@ -81,10 +84,9 @@
   }
 }
 
-.modal-container > .container > .html {
+.modal-container > .container > .inbox > .html {
   text-align: left;
   overflow-x: scroll;
-  width: calc(90% - 1.8em);
   margin-right: 1.8em;
   display: inline-block;
   color: #282c34;
