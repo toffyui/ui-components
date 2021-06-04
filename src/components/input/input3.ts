@@ -1,0 +1,53 @@
+import { styleModel } from "models/styleModel";
+
+export const input3: styleModel = {
+  title: "input3",
+  scss: `.input3 {
+  width: 90%;
+  height: 2rem;
+  margin: 80px auto;
+  position: relative;
+  text-align: left;
+  > input {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #bfc5ca;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    &:focus {
+      border-color: #333c5f;
+      transition: all 1s;
+    }
+    &:focus + label {
+      color: #333c5f;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      transform: translate3d(5px, -6px, 0);
+    }
+  }
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    background-color: transparent;
+    color: #808080;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+  }
+}
+`,
+} as const;
