@@ -47,11 +47,8 @@ const CodeBlock = ({ style }: Props) => {
         </div>
       )}
       {isOpen && (
-        <div onClick={stopPropagation}>
-          <Modal
-            closeModal={clickHandler}
-            copyText={() => copyText(style.scss)}
-          >
+        <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
+          <div onClick={stopPropagation} className="inbox">
             {style.title.indexOf("loader") !== -1 && (
               <code className="html">
                 &lt;div class="{style.title}"&gt;&lt;/div&gt;
@@ -74,8 +71,8 @@ const CodeBlock = ({ style }: Props) => {
             <pre className="code">
               <code className="scss">{style.scss}</code>
             </pre>
-          </Modal>
-        </div>
+          </div>
+        </Modal>
       )}
     </div>
   );
