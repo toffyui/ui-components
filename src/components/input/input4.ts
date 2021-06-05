@@ -47,7 +47,7 @@ export const input4: styleModel = {
   }
   > label {
     position: absolute;
-    top: 8px;
+    top: 7px;
     left: 15px;
     color: #808080;
   }
