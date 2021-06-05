@@ -46,6 +46,15 @@ const CodeBlock = ({ style }: Props) => {
           <label>Name</label>
         </div>
       )}
+      {style.title.indexOf("text") !== -1 && (
+        <div className={style.title}>
+          <span>H</span>
+          <span>e</span>
+          <span>l</span>
+          <span>l</span>
+          <span>o</span>
+        </div>
+      )}
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
           <div onClick={stopPropagation} className="inbox">
@@ -66,6 +75,22 @@ const CodeBlock = ({ style }: Props) => {
                 &nbsp; &lt;input type="text" /&gt;
                 <br /> &nbsp; &lt;label&gt;Name&lt;/label&gt;
                 <br /> &lt;/div&gt;
+              </code>
+            )}
+            {style.title.indexOf("text") !== -1 && (
+              <code className="html">
+                &lt;div class="{style.title}"&gt;
+                <br />
+                &nbsp; &lt;span&gt;H&lt;/span&gt;
+                <br />
+                &nbsp; &lt;span&gt;e&lt;/span&gt;
+                <br />
+                &nbsp; &lt;span&gt;l&lt;/span&gt;
+                <br />
+                &nbsp; &lt;span&gt;l&lt;/span&gt;
+                <br />
+                &nbsp; &lt;span&gt;o&lt;/span&gt; <br />
+                &lt;/div&gt;
               </code>
             )}
             <pre className="code">

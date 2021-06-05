@@ -3,6 +3,7 @@ import LoaderPage from "pages/LoaderPage";
 import ButtonPage from "pages/ButtonPage";
 import MainPage from "pages/MainPage";
 import InputPage from "pages/InputPage";
+import TextPage from "pages/TextPage";
 import "styles/global.scss";
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
         </Route>
         <Route exact path="/input">
           <InputPage />
+        </Route>
+        <Route exact path="/text">
+          <TextPage />
         </Route>
       </Switch>
     </BrowserRouter>
