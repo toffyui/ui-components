@@ -43,6 +43,10 @@ const MainPage = () => {
             <span>o</span>
           </div>
         </div>
+        <div className="code-block-container" onClick={() => goPage("/Arrow")}>
+          <div className="title">Arrows</div>
+          <div className="arrow3"></div>
+        </div>
       </div>
       <Footer />
     </>
