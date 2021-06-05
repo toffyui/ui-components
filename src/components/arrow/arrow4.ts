@@ -26,7 +26,7 @@ export const arrow4: styleModel = {
     transform: rotate(0deg);
   }
   &::after {
-    top: 50px;
+    top: calc(50% + 50px);
     left: -50px;
     border: 0 solid transparent;
     border-left: 25px solid#333c5f;
