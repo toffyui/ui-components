@@ -2,14 +2,40 @@ import { styleModel } from "models/styleModel";
 
 export const arrow4: styleModel = {
   title: "arrow4",
-  scss: `.arrow1 {
-  margin: 80px auto;
-  width: 2rem;
-  height: 2rem;
-  border-top: 10px solid #333c5f;
-  border-right: 10px solid #333c5f;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
+  scss: `.arrow4 {
+  margin: 100px auto;
+  position: relative;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  &::before {
+    left: 70px;
+    box-sizing: border-box;
+    width: 35px;
+    height: 35px;
+    border: 35px solid transparent;
+    border-left: 35px solid #333c5f;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  &::after {
+    top: 50px;
+    left: -50px;
+    border: 0 solid transparent;
+    border-left: 25px solid#333c5f;
+    border-radius: 0 0 0 60px;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}  
 `,
 } as const;
