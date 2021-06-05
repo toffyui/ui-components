@@ -56,6 +56,11 @@ const CodeBlock = ({ style }: Props) => {
           <span>o</span>
         </div>
       )}
+      {style.title.indexOf("bubble") !== -1 && (
+        <div className={style.title}>
+          <p>Hello World!</p>
+        </div>
+      )}
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
           <div onClick={stopPropagation} className="inbox">
@@ -92,6 +97,15 @@ const CodeBlock = ({ style }: Props) => {
                 &nbsp; &lt;span&gt;l&lt;/span&gt;
                 <br />
                 &nbsp; &lt;span&gt;o&lt;/span&gt; <br />
+                &lt;/div&gt;
+              </code>
+            )}
+            {style.title.indexOf("bubble") !== -1 && (
+              <code className="html">
+                &lt;div class="{style.title}"&gt;
+                <br />
+                &nbsp; &lt;p&gt;Hello World!&lt;/p&gt;
+                <br />
                 &lt;/div&gt;
               </code>
             )}

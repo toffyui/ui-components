@@ -5,6 +5,7 @@ import MainPage from "pages/MainPage";
 import InputPage from "pages/InputPage";
 import TextPage from "pages/TextPage";
 import ArrowPage from "pages/ArrowPage";
+import BubblePage from "pages/BubblePage";
 import "styles/global.scss";
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
         </Route>
         <Route exact path="/arrow">
           <ArrowPage />
+        </Route>
+        <Route exact path="/bubble">
+          <BubblePage />
         </Route>
       </Switch>
     </BrowserRouter>
