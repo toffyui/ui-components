@@ -9,6 +9,7 @@ export const arrow1: styleModel = {
   border-top: 10px solid #333c5f;
   border-right: 10px solid #333c5f;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 `,
 } as const;
