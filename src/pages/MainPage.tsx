@@ -33,6 +33,16 @@ const MainPage = () => {
             <label>Name</label>
           </div>
         </div>
+        <div className="code-block-container" onClick={() => goPage("/Text")}>
+          <div className="title">Texts</div>
+          <div className="text4">
+            <span>H</span>
+            <span>e</span>
+            <span>l</span>
+            <span>l</span>
+            <span>o</span>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
