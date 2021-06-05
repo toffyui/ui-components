@@ -46,6 +46,9 @@ const CodeBlock = ({ style }: Props) => {
           <label>Name</label>
         </div>
       )}
+      {style.title.indexOf("text") !== -1 && (
+        <div className={style.title}>Text Animation</div>
+      )}
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
           <div onClick={stopPropagation} className="inbox">
@@ -66,6 +69,11 @@ const CodeBlock = ({ style }: Props) => {
                 &nbsp; &lt;input type="text" /&gt;
                 <br /> &nbsp; &lt;label&gt;Name&lt;/label&gt;
                 <br /> &lt;/div&gt;
+              </code>
+            )}
+            {style.title.indexOf("text") !== -1 && (
+              <code className="html">
+                &lt;div class="{style.title}"&gt;Text Animation&lt;/div&gt;
               </code>
             )}
             <pre className="code">
