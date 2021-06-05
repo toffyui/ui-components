@@ -2,39 +2,56 @@ import { styleModel } from "models/styleModel";
 
 export const text1: styleModel = {
   title: "text1",
-  scss: `.loader1 {
-  position: relative;
-  width: 0.75em;
-  height: 4em;
+  scss: `.text1 {
   margin: 60px auto;
-  background: rgba(255, 255, 255, 0.5);
-  animation: loader1 1s infinite;
-  -webkit-animation: loader1 1s infinite;
-  animation-delay: (1s / 3);
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 3em;
-    width: 0.75em;
-    background: rgba(255, 255, 255, 0.5);
-    top: 50%;
-    transform: translateY(-50%);
-    animation: loader1 1s infinite;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.text1 > span {
+  color: transparent;
+  animation: text1 2.5s ease-out infinite;
+  &:nth-child(1) {
+    animation-delay: 0.1s;
   }
-  &::before {
-    left: -1.3em;
+  &:nth-child(2) {
+    animation-delay: 0.2s;
   }
-  &::after {
-    left: 1.3em;
-    animation-delay: (1s / 1.5);
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  &:nth-child(5) {
+    animation-delay: 0.5s;
   }
 }
-
-@keyframes loader1 {
-  50% {
-    background: #333c5f;
+@keyframes text1 {
+  0% {
+    text-shadow: 0 0 100px#576199;
+    opacity: 0;
+  }
+  5% {
+    text-shadow: 0 0 90px #333c5f;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px#333c5f;
+  }
+  80% {
+    text-shadow: 0 0 0px#333c5f;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 0 0 90px #333c5f;
+  }
+  100% {
+    text-shadow: 0 0 100px #576199;
+    opacity: 0;
   }
 }
 `,
