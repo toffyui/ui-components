@@ -1,4 +1,8 @@
-.arrow3 {
+import { styleModel } from "models/styleModel";
+
+export const arrow3: styleModel = {
+  title: "arrow3",
+  scss: `.arrow3 {
   margin: 100px auto;
   position: relative;
   &::before,
@@ -32,4 +36,6 @@
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
-}
+}  
+`,
+} as const;
