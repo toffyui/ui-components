@@ -11,6 +11,7 @@ export const text2: styleModel = {
   color: #333c5f;
   opacity: 0;
   animation: text2 2.5s infinite;
+  -webkit-animation: text2 2.5s infinite;
   @for $i from 1 through 5 {
     &:nth-child(#{$i + 1}) {
       $delay: $i * 0.1 + s;

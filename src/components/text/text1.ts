@@ -10,6 +10,7 @@ export const text1: styleModel = {
 .text1 > span {
   color: transparent;
   animation: text1 2.5s ease-out infinite;
+  -webkit-animation: text1 2.5s ease-out infinite;
   @for $i from 1 through 5 {
     &:nth-child(#{$i + 1}) {
       $delay: $i * 0.1 + s;
