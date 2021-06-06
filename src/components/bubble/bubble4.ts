@@ -7,7 +7,6 @@ export const bubble4: styleModel = {
   position: relative;
   padding: 10px;
   width: 120px;
-  height: 120px;
   border-radius: 50%;
   text-align: center;
   color: #fff;
