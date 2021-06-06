@@ -34,7 +34,8 @@ const CodeBlock = ({ style }: Props) => {
   };
   return (
     <div className="code-block-container" onClick={clickHandler}>
-      {style.title.indexOf("loader") !== -1 && (
+      {(style.title.indexOf("loader") !== -1 ||
+        style.title.indexOf("arrow") !== -1) && (
         <div className={style.title}></div>
       )}
       {style.title.indexOf("button") !== -1 && (
@@ -58,7 +59,8 @@ const CodeBlock = ({ style }: Props) => {
       {isOpen && (
         <Modal closeModal={clickHandler} copyText={() => copyText(style.scss)}>
           <div onClick={stopPropagation} className="inbox">
-            {style.title.indexOf("loader") !== -1 && (
+            {(style.title.indexOf("loader") !== -1 ||
+              style.title.indexOf("arrow") !== -1) && (
               <code className="html">
                 &lt;div class="{style.title}"&gt;&lt;/div&gt;
               </code>

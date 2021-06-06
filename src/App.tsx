@@ -4,6 +4,7 @@ import ButtonPage from "pages/ButtonPage";
 import MainPage from "pages/MainPage";
 import InputPage from "pages/InputPage";
 import TextPage from "pages/TextPage";
+import ArrowPage from "pages/ArrowPage";
 import "styles/global.scss";
 
 const App = () => {
@@ -24,6 +25,9 @@ const App = () => {
         </Route>
         <Route exact path="/text">
           <TextPage />
+        </Route>
+        <Route exact path="/arrow">
+          <ArrowPage />
         </Route>
       </Switch>
     </BrowserRouter>

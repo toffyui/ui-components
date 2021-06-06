@@ -1,0 +1,31 @@
+import { styleModel } from "models/styleModel";
+
+export const arrow3: styleModel = {
+  title: "arrow3",
+  scss: `.arrow3 {
+  margin: 95px auto;
+  position: relative;
+  width: 70px;
+  height: 10px;
+  background: #333c5f;
+  border-radius: 10px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background: #333c5f;
+  }
+  &::before {
+    top: calc(50% - 20px);
+    transform: rotate(45deg);
+  }
+  &::after {
+    bottom: calc(50% - 20px);
+    transform: rotate(-45deg);
+  }
+}
+`,
+} as const;
