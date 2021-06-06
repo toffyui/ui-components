@@ -12,7 +12,7 @@ export const text3: styleModel = {
 .text3 > span {
   color: #333c5f;
   animation: text3 2.5s infinite;
-  -webkit-animation: text3 2.5s ease infinite;
+  -webkit-animation: text3 2.5s infinite;
   @for $i from 1 through 5 {
     &:nth-child(#{$i + 1}) {
       $delay: $i * 0.2 + s;
