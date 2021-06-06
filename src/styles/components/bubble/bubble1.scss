@@ -1,0 +1,35 @@
+.bubble1 {
+  margin: 70px auto;
+  position: relative;
+  display: inline-block;
+  padding: 15px 10px;
+  color: #333c5f;
+  font-size: 1.5rem;
+  background: #fff;
+  border: solid 2px #333c5f;
+  border-radius: 5px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    margin-top: -10px;
+    border: 10px solid transparent;
+    border-left: 10px solid #fff;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-left: 12px solid#333c5f;
+    z-index: 1;
+  }
+}
+.bubble1 > p {
+  margin: 0;
+  padding: 0;
+}

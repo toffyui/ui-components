@@ -1,21 +1,21 @@
 import Header from "components/common/Header";
 import Footer from "components/common/Footer";
 import CodeBlock from "components/common/CodeBlock";
-import { inputs } from "components/input";
+import { bubbles } from "components/bubble";
 import "styles/components/common/container.scss";
 import { styleModel } from "models/styleModel";
 
-const InputPage = () => {
+const BubblePage = () => {
   return (
     <>
       <Header />
       <div className="main-container">
-        {inputs.map((input: styleModel, index: number) => (
-          <CodeBlock style={input} key={index} />
+        {bubbles.map((bubble: styleModel, index: number) => (
+          <CodeBlock style={bubble} key={index} />
         ))}
       </div>
       <Footer />
     </>
   );
 };
-export default InputPage;
+export default BubblePage;

@@ -47,6 +47,12 @@ const MainPage = () => {
           <div className="title">Arrows</div>
           <div className="arrow3"></div>
         </div>
+        <div className="code-block-container" onClick={() => goPage("/Bubble")}>
+          <div className="title">Bubbles</div>
+          <div className="bubble2">
+            <p>Hello World!</p>
+          </div>
+        </div>
       </div>
       <Footer />
     </>

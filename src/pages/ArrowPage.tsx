@@ -5,7 +5,7 @@ import { arrows } from "components/arrow";
 import "styles/components/common/container.scss";
 import { styleModel } from "models/styleModel";
 
-const ButtonPage = () => {
+const ArrowPage = () => {
   return (
     <>
       <Header />
@@ -18,4 +18,4 @@ const ButtonPage = () => {
     </>
   );
 };
-export default ButtonPage;
+export default ArrowPage;

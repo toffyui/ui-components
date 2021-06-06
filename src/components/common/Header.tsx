@@ -5,7 +5,15 @@ import "styles/components/common/header.scss";
 import clsx from "clsx";
 
 const Header = () => {
-  const pages = ["HOME", "Loader", "Button", "Input", "Text", "Arrow"];
+  const pages = [
+    "HOME",
+    "Loader",
+    "Button",
+    "Input",
+    "Text",
+    "Arrow",
+    "Bubble",
+  ];
   const location = useLocation();
   const nowLocation = location.pathname.slice(1);
   const [page, setPage] = useState<string>(nowLocation || "HOME");
