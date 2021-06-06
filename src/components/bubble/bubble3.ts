@@ -1,4 +1,8 @@
-.bubble3 {
+import { styleModel } from "models/styleModel";
+
+export const bubble3: styleModel = {
+  title: "bubble3",
+  scss: `.bubble3 {
   margin: 50px auto;
   margin-right: 30px;
   position: relative;
@@ -34,3 +38,5 @@
   margin: 0;
   padding: 0;
 }
+`,
+} as const;

@@ -1,30 +1,29 @@
 .bubble2 {
-  margin: 35px auto;
+  margin: 70px auto;
+  margin-right: 10px;
   position: relative;
-  padding: 10px;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  text-align: center;
-  color: #fff;
+  display: inline-block;
+  padding: 15px;
+  color: #333c5f;
   font-size: 1.5rem;
-  background: #333c5f;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   &::before {
     content: "";
     position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    right: -20px;
-    top: calc(50% - 20px);
-    border-left: 30px solid #333c5f;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    transform: rotate(-15deg);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+    top: 50%;
+    right: -10px;
+    margin-left: -10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%) rotate(-45deg) skew(20deg, 20deg);
   }
 }
-
 .bubble2 > p {
-  display: inline-block;
-  text-align: center;
+  margin: 0;
+  padding: 0;
 }
