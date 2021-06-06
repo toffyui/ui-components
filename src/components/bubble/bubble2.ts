@@ -1,4 +1,8 @@
-.bubble2 {
+import { styleModel } from "models/styleModel";
+
+export const bubble2: styleModel = {
+  title: "bubble2",
+  scss: `.bubble2 {
   margin: 35px auto;
   position: relative;
   padding: 10px;
@@ -23,8 +27,9 @@
     transform: rotate(-15deg);
   }
 }
-
 .bubble2 > p {
   display: inline-block;
   text-align: center;
 }
+`,
+} as const;
