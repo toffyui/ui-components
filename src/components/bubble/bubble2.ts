@@ -24,7 +24,7 @@ export const bubble2: styleModel = {
     right: -10px;
     margin-left: -10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-    transform: translateY(-50%) rotate(-45deg) skew(20deg, 20deg);
+    transform: translateY(-50%) rotate(-45deg) skew(10deg, 10deg);
   }
 }
 .bubble2 > p {
